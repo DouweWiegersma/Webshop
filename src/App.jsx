@@ -15,14 +15,19 @@ import SmallImg4 from './assets/image-product-1-thumbnail.jpg'
 import {useState} from "react";
 import {calculateDiscount} from "./helper/discount.js";
 function App() {
+
   const [open, setOpen] = useState(false)
   const title = 'Fall Limited Edition Sneakers'
-  const price = 250
+  const [price, setPrice] = useState(250)
   const [quantity, setQuantity] = useState(0)
   const [items, setItems] = useState(0)
   const smallImg = [SmallImg1, SmallImg2, SmallImg3, SmallImg4]
-  const discount = 50
+  const discount = 24
   const total = calculateDiscount(price, discount)
+
+
+
+
 
 
 
@@ -30,16 +35,15 @@ function App() {
 
   return (
       <>
-        <NavBar setOpen={setOpen} open={open}/>
-        <div className={`absolute w-full h-64 max-h-60 z-40 transition-all duration-300
+        <NavBar setOpen={setOpen} open={open} quantity={quantity} items={items}/>
+        <div className={`absolute w-full h-64 max-h-60 z-50 transition-all duration-300
               ${open ? 'pointer-events-auto' : 'pointer-events-none'}`}>
-          <Cart title={title} items={items} smallImg={smallImg} total={total} open={open} />
+          <Cart title={title} items={items} smallImg={smallImg} total={total} open={open} setItems={setItems} setQuantity={setQuantity} setPrice={setPrice} />
         </div>
         <div className='relative'>
-          <Slider/>
+          <Slider open={open} setOpen={setOpen}/>
         </div>
-
-        <Information/>
+        <Information title={title}/>
         <Price price={price} discount={discount}/>
         <Counter setQuantity={setQuantity} quantity={quantity}/>
         <AddToCard quantity={quantity} items={items} setItems={setItems}/>

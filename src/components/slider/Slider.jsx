@@ -6,7 +6,7 @@ import Previous from '../../assets/icon-previous.svg?react'
 import Next from '../../assets/icon-next.svg?react'
 import {useState} from "react";
 
-function Slider(){
+function Slider({open}){
 
     const [current, setCurrent] = useState(0)
     const images = [product1, product2, product3, product4]
@@ -28,15 +28,21 @@ function Slider(){
         <>
             <div className='w-full max-w-md mx-auto grid grid-rows-3 grid-cols-3 h-72'>
 
-                <button onClick={previous}
-                        className='m-4 justify-self-start z-30 row-span-3 col-span-1 place-self-center bg-white rounded-full hover:bg-white absolute h-10 w-10'>
+                <button onClick={previous} disabled={open}
+                        className={`m-4 justify-self-start z-30 row-span-3 col-span-1 place-self-center rounded-full absolute h-10 w-10 flex justify-center items-center
+    ${open ? 'bg-gray-300 opacity-50 cursor-not-allowed' : 'bg-white hover:bg-gray-100'}`}
+                >
                     <div className='flex justify-center items-center'>
                         <Previous/>
                     </div>
                 </button>
                 <img src={images[current]} alt='shoesImage' className='row-span-3 col-span-3 w-full object-cover h-72 z-0 relative'/>
-                    <button onClick={next} className="m-4 z-30 place-self-center justify-self-end bg-white rounded-full h-10 w-10 hover:bg-white absolute">
-                        <div className='flex justify-center items-center'>
+                    <button onClick={next}   disabled={open}
+                            className={`m-4 justify-self-end z-30 place-self-center rounded-full absolute h-10 w-10 flex justify-center items-center
+                            ${open ? 'bg-gray-300 opacity-50 cursor-not-allowed' : 'bg-white hover:bg-gray-100'}`}
+                    >
+
+                    <div className='flex justify-center items-center'>
                             <Next />
                         </div>
                         </button>
