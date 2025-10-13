@@ -26,7 +26,7 @@ function Slider(){
             <div className='w-full max-w-md mx-auto grid grid-rows-3 grid-cols-3 h-72'>
 
                 <button onClick={previous}
-                        className='m-4 justify-self-start z-50 row-span-3 col-span-1 place-self-center bg-white rounded-full hover:bg-white absolute h-10 w-10'>
+                        className='m-4 justify-self-start z-10 row-span-3 col-span-1 place-self-center bg-white rounded-full hover:bg-white absolute h-10 w-10'>
                     <div className='flex justify-center items-center'>
                         <Previous/>
                     </div>
