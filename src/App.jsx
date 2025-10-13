@@ -29,21 +29,23 @@ function App() {
 
 
   return (
-    <>
-      <NavBar setOpen={setOpen} open={open}/>
-      <div className='absolute z-50 w-full h-64 max-h-60'>
-      <Cart title={title} items={items} smallImg={smallImg} total={total} open={open}/>
-      </div>
-      <div className='relative'>
-        <Slider/>
-      </div>
+      <>
+        <NavBar setOpen={setOpen} open={open}/>
+        <div className={`absolute w-full h-64 max-h-60 z-40 transition-all duration-300
+              ${open ? 'pointer-events-auto' : 'pointer-events-none'}`}>
+          <Cart title={title} items={items} smallImg={smallImg} total={total} open={open} />
+        </div>
+        <div className='relative'>
+          <Slider/>
+        </div>
+
         <Information/>
         <Price price={price} discount={discount}/>
         <Counter setQuantity={setQuantity} quantity={quantity}/>
         <AddToCard quantity={quantity} items={items} setItems={setItems}/>
 
 
-    </>
+      </>
   )
 }
 
