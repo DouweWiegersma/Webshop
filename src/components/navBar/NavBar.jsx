@@ -9,7 +9,7 @@ function NavBar(){
 
         <>
 
-            <nav className='flex flex-row w-screen h-16 justify-evenly items-center border-2 border-black-400'>
+            <nav className='flex flex-row w-screen h-20 justify-evenly items-center border-2 border-black-400'>
                 <div className='flex flex-row items-center ml-6 w-64 gap-4'>
             <button><Menu/></button>
             <Title/>
