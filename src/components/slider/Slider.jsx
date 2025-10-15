@@ -34,7 +34,7 @@ function Slider({open, handlePreview}){
         <>
 
             <div className='md:flex md:flex-col'>
-            <div className='w-full max-w-md mx-auto grid grid-rows-3 grid-cols-3 h-72'>
+            <div className='w-full max-w-md mx-auto grid grid-rows-3 grid-cols-3 h-72 relative'>
                 <button onClick={previous} disabled={open}
                         className={`m-4 md:hidden justify-self-start z-30 row-span-3 col-span-1 place-self-center rounded-full absolute h-10 w-10 flex justify-center items-center
     ${open ? 'bg-gray-300 opacity-50 cursor-not-allowed' : 'bg-white hover:bg-gray-100'}`}
