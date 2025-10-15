@@ -41,7 +41,7 @@ function App() {
   return (
       <>
 
-            <div className='md:relative md:overflow-hidden'>
+            <div className='md:relative md:overflow-hidden mb-5'>
           <NavBar setOpen={setOpen} open={open} quantity={quantity} items={items} menuOpen={menuOpen} handleClick={handleClick}
                   toggleMenuOpen={toggleMenuOpen}/>
           <Product menuOpen={menuOpen} title={title} items={items} smallImg={smallImg} setItems={setItems} preview={preview} togglePreview={togglePreview} handleClick={handleClick} setQuantity={setQuantity} price={price} total={total} quantity={quantity} setOpen={setOpen} setPrice={setPrice} discount={discount} open={open} handlePreview={handlePreview}/>
