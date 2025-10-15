@@ -9,14 +9,17 @@ function Cart({title, smallImg, total, open, setItems, setQuantity, setPrice, it
         setQuantity(0)
     }
 
+
+
     if (!open) return null
+
     return(
 
         <>
 
 
             {items !== 0 ? (
-                <div className='flex justify-center items-center m-2'>
+                <div className={`flex justify-center items-center m-2 shadow-lg shadow-black`}>
                 <div className='bg-white rounded-lg w-full h-64 max-h-64 flex flex-col justify-between p-4'>
                 <div>
                 <h1 className='font-bold'>Cart</h1>
@@ -32,9 +35,9 @@ function Cart({title, smallImg, total, open, setItems, setQuantity, setPrice, it
                             <Trashcan/>
                             </button>
                         </div>
-                        <button className='w11/12 h-12 bg-orange-500 rounded-lg font-bold'>Checkout</button>
+                        <button className='w-11/12 h-12 bg-orange-500 rounded-lg font-bold'>Checkout</button>
                     </div>
-                </div>) : (<div className='flex justify-center items-center m-2'>
+                </div>) : (<div className='flex justify-center items-center m-2 shadow-lg shadow-black'>
                     <div className='bg-white rounded-lg w-full h-64 max-h-64 flex flex-col justify-between p-4'>
                         <div className='border-b pb-4'>
                             <h1 className='font-bold text-lg'>Cart</h1>

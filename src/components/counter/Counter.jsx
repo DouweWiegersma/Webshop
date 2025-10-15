@@ -16,7 +16,7 @@ function Counter({quantity, setQuantity}){
 
     return(
         <>
-            <div className='flex justify-between items-center w-screen pl-12 pr-12 h-16'>
+            <div className='flex justify-between items-center w-screen  md:w-44 md:bg-gray-300 md:rounded pl-12 pr-12 h-16'>
                 <button onClick={remove}><Minus/></button>
                 <p className='text-lg font-bold'>{quantity}</p>
                 <button onClick={add}><Plus/></button>

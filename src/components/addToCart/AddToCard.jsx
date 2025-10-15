@@ -6,7 +6,7 @@ function AddToCard({quantity, setItems}){
     return(
         <>
             <div className='flex justify-center items-center align-middle'>
-            <button onClick={handleClick} className='w-11/12 border-2 bg-orange-500 flex justify-center items-center p-4 rounded-lg gap-6 text-black font-bold'> <Cart style={{ color: 'black' }} /> Add to cart</button>
+            <button onClick={handleClick} className='w-11/12 md:w-44 h-16 md:gap-1 bg-orange-500 flex justify-center items-center p-4 rounded-lg gap-6 text-black font-bold'> <Cart style={{ color: 'black' }} /> Add to cart</button>
             </div>
 
         </>
